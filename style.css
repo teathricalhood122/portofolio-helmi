@@ -1,0 +1,192 @@
+/* --- 1. COLORS & VARIABLES --- */
+:root {
+    --bg-dark: #000000;
+    --bg-card: #1a1a1a;
+    --text-main: #ffffff;
+    --text-secondary: #cccccc;
+    --accent-teal: #00e5ff;
+    --teal-dark: #00b8cc; /* Warna pas hover */
+}
+
+/* --- 2. GLOBAL RESET --- */
+body {
+    background-color: var(--bg-dark) !important;
+    color: var(--text-main) !important;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { color: var(--text-main) !important; }
+p, li, span { color: var(--text-secondary); }
+.text-muted { color: #b0b0b0 !important; }
+
+/* --- 3. NAVBAR --- */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+}
+.text-teal { color: var(--accent-teal) !important; }
+
+/* --- 4. BUTTONS (FIX HOVER DISINI) --- */
+.btn-teal {
+    background-color: var(--accent-teal) !important;
+    color: #000000 !important;
+    font-weight: 700;
+    border: none;
+    transition: all 0.3s ease-in-out; /* Animasi halus */
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+/* KITA PAKSA BERUBAH WARNA PAS HOVER */
+.btn-teal:hover {
+    background-color: #ffffff !important; /* Jadi Putih pas disorot */
+    color: var(--accent-teal) !important; /* Teks jadi Teal */
+    transform: translateY(-3px); /* Naik dikit */
+    box-shadow: 0 0 20px #00e5ff99; /* Glowing makin terang */
+}
+
+.btn-outline-light {
+    border: 2px solid #ffffff;
+    color: #ffffff !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    transform: translateY(-3px);
+}
+
+/* --- 5. CARDS SKILL & EXPERIENCE (FIX MELAYANG) --- */
+.section-padding { padding: 80px 0; }
+.bg-darker { background-color: #050505; }
+
+.skill-card {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease; /* Wajib ada biar gak kaku */
+    cursor: default;
+}
+
+/* EFEK HOVER SKILL CARD */
+.skill-card:hover {
+    border-color: var(--accent-teal);
+    transform: translateY(-10px); /* Melayang ke atas */
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.15); /* Bayangan Neon */
+}
+
+.timeline-item {
+    border-left: 2px solid var(--accent-teal);
+    padding: 0 0 40px 30px;
+    position: relative;
+}
+.timeline-item .company { color: var(--accent-teal) !important; font-weight: 600; }
+
+/* --- 6. PROJECT CARDS (FIX GAMBAR & OVERLAY) --- */
+.project-card {
+    background: #1a1a1a;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+/* KARTU PROJECT MELAYANG */
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-teal);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.card-img-wrapper {
+    position: relative; /* Penting buat overlay */
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* GAMBARNYA NGE-ZOOM DIKIT PAS DI-HOVER */
+.project-card:hover img {
+    transform: scale(1.1);
+    opacity: 0.4; /* Gelapin gambar biar teks/icon kelihatan */
+}
+
+/* --- 7. OVERLAY BUTTON (TOMBOL LINK DI GAMBAR) --- */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Ngumpet dulu */
+    transition: all 0.3s ease;
+}
+
+/* MUNCUL PAS HOVER */
+.card-img-wrapper:hover .overlay {
+    opacity: 1; /* Muncul! */
+}
+
+.overlay .btn {
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.card-img-wrapper:hover .overlay .btn {
+    transform: translateY(0);
+}
+
+/* --- 8. FOOTER --- */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: #000;
+}
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: var(--accent-teal) !important;
+    transform: scale(1.2);
+}
+
+/* --- ANIMATION CSS (TARUH PALING BAWAH) --- */
+
+/* 1. Navbar pas discroll jadi makin gelap & blur */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.95) !important;
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* 2. State Awal (Ngumpet) */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Turun 50px ke bawah */
+    transition: all 1s ease; /* Durasi animasi 1 detik */
+    filter: blur(5px);
+}
+
+/* 3. State Akhir (Muncul) */
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Balik ke posisi asal */
+    filter: blur(0);
+}
+
+/* Biar timeline item munculnya gantian (Staggered effect) */
+.timeline-item:nth-child(2) { transition-delay: 200ms; }
+.timeline-item:nth-child(3) { transition-delay: 400ms; }
+.project-card:nth-child(2) { transition-delay: 200ms; }
