@@ -25,6 +25,6 @@ Welcome to my personal portfolio repository! This project showcases my journey a
 
 ### 📫 Let's Connect!
 * **LinkedIn:** [linkedin.com/in/helmifajari]( https://id.linkedin.com/in/helmi-mohammad-fajari-74b8422a7)
-* **Email:** (helmifajari1927@gmail.com)
+* **Email:** helmifajari1927@gmail.com
 
 _Thanks for visiting! Don't forget to star ⭐ this repo if you find it cool._
