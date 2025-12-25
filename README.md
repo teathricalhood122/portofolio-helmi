@@ -4,7 +4,7 @@
 
 Welcome to my personal portfolio repository! This project showcases my journey as a developer, highlighting my skills in web development and workflow automation.
 
-🌐 **Live Demo:** [https://helmi-fajari.vercel.app](https://helmi-fajari.vercel.app) (GANTI SAMA LINK VERCEL LO)
+🌐 **Live Demo:** [https://portofolio-helmi-ecru.vercel.app/](https://portofolio-helmi-ecru.vercel.app/) 
 
 ---
 
@@ -24,7 +24,7 @@ Welcome to my personal portfolio repository! This project showcases my journey a
 ---
 
 ### 📫 Let's Connect!
-* **LinkedIn:** [linkedin.com/in/helmifajari](https://www.linkedin.com/in/helmifajari) (GANTI LINK LO)
-* **Email:** (Masukin Email Lo)
+* **LinkedIn:** [linkedin.com/in/helmifajari]( https://id.linkedin.com/in/helmi-mohammad-fajari-74b8422a7)
+* **Email:** (helmifajari1927@gmail.com)
 
 _Thanks for visiting! Don't forget to star ⭐ this repo if you find it cool._
